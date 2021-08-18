@@ -10,11 +10,11 @@ Java script Assignment - Milinda 'ML' Liyanage
 
 ### The following tasks were done for Level 1: 
 
-* The data was read 
-* A function was created to append the data on to the table.
-* A separate function was created to clear the data in the table.
+* The data was read.
+* A function was created to append the data on to the html table.
+* A separate function was created to clear the data in the html table.
 * Another function was created to run when the filter button was pressed (triggered).
-* In the triggered function, the entered date was read and then the data filtered before calling the append function.
+* In the triggered function, the entered date was read and then the data was filtered before calling the append function.
 * In the triggered function there is test to check if the is a value for the date, if not it will display the unfiltered table.
 
 ### Optional Level 2:
