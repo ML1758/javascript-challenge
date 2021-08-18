@@ -1,10 +1,10 @@
 // from data.js
 var tableData = data;
 
-// YOUR CODE HERE!
-
+// select the table body
 var tbody = d3.select("tbody");
 
+// function populate (append) the talbe with data 
 function populateTable (data) {
     data.forEach((dataRow) => {
 
@@ -17,7 +17,7 @@ function populateTable (data) {
     });
 }
 
-// clear the table before displaying new data
+// clear the table before displaying (appending) new data
 function clearTable () {
     var table = document.getElementById("ufo-table");
     for(var i = table.rows.length - 1; i > 0; i--)
@@ -26,22 +26,21 @@ function clearTable () {
     }
 }
 
-// call the tabe pop
+// call the table populate 
 populateTable(tableData);
 
-// filter button
+// get a handle for the filter button
 var filterButton = d3.select("#filter-btn");
 
+// function to trigger when button in clicked
 filterButton.on("click", function () {
-    
-    // filter value date
-    var filterDateElement = d3.select("#datetime");
-    var filterDateValue = filterDateElement.property("value");
 
-    // test code
-    //console.log(filterDateElement);
-    //console.log(filterDateValue);
- 
+    // Prevent the page from refreshing
+    d3.event.preventDefault();
+    
+    // get entered date value
+    var filterDateValue = d3.select("#datetime").property("value");
+
      // clear table
      clearTable()   
 
